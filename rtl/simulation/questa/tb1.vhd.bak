@@ -1,0 +1,21 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity tb is 
+end entity;
+
+architecture tb of tb is 	
+	signal a : integer := 10#42#;
+	signal iterations : integer := 0;
+begin
+	
+	-- From here we will learn vhdl-2008 as language
+	 stimulus: 
+	 process begin
+		report "lalu prasad yadav" severity note;
+		iterations <= iterations + 1;
+		assert iterations > a report "reached" & iterations(i) & "interations";
+	 end process;	
+end;
+
+

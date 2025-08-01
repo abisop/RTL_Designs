@@ -11,7 +11,11 @@ entity ip is
 	);
 end ip;
 
-architecture ip_rtl of ip is
+architecture rtl_ip of ip is
 begin
-	out1 <= in1 + in2;
+	and_gate : process(in1, in2) begin
+		for i in 0 to 5 loop
+			out1(i) <= in1(i) and in2(i);
+		end loop;
+	end process;
 end ip_rtl;
